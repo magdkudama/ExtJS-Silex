@@ -1,0 +1,14 @@
+{
+	"data":
+	[
+		{% for usuario in usuarios %}
+			{
+				"id":"{{ usuario.id }}",
+				"nombre":"{{ usuario.nombre }}",
+				"email":"{{ usuario.email }}",
+				"fecha_alta":"{{ usuario.fecha_alta }}"
+			},
+		{% endfor %}
+	],
+	{% block total %}{% endblock %}
+}
